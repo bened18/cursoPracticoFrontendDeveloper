@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .account {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .account__container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .account__container__title {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: start;
+            margin-bottom: 36px;
+        }
+        .account__container__form {
+            display: flex;
+            flex-direction: column;
+        }
+        .account__container__form div {
+            display: flex;
+            flex-direction: column;
+        }
+        .account__container__form__label-name{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .account__container__form__input-name {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 22px;
+        }
+        .account__container__form__label-email{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .account__container__form__input-email {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 22px;
+        }
+        .account__container__form__label-password{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .account__container__form__input-password {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 22px;
+        }
+        .account__container__form__submit {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 46px;
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 600px) {
+            .account__container__form {
+                height: 100%;
+                justify-content: space-between;
+            }
+            .account__container{
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="account">
+        <div class="account__container">
+
+            <h1 class="account__container__title">My account</h1>
+        
+            <form action="/" class="account__container__form">
+                <div>
+                    <label for="name" class="account__container__form__label-name label">Name</label>
+                    <input type="text" id="name" placeholder="Name" class="account__container__form__input-name input">
+
+                    <label for="email" class="account__container__form__label-email label">Email</label>
+                    <input type="text" id="email" placeholder="user@example.com" class="account__container__form__input-email input">
+
+                    <label for="password" class="account__container__form__label-password label">Password</label>
+                    <input type="password" id="password" placeholder="*********" class="account__container__form__input-password input">
+                </div>
+                
+                <input type="submit" value="Create" class="account__container__form__submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
