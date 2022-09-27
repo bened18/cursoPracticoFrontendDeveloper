@@ -36,9 +36,9 @@
             margin: 0;
         }
         .desktop-menu ul li {
-            text-align: end;
+            text-align: end; 
         }
-        .desktop-menu ul li:not(:last-child){
+        .desktop-menu ul li:nth-child(1), .desktop-menu ul li:nth-child(2) {
             font-weight: bold;
         }
         .desktop-menu ul li:last-child {
@@ -49,10 +49,10 @@
             color: var(--hospital-green);
             font-size: var(--sm);
         }
-        .desktop-menu ul li a{
-            display: inline-block;
+        .desktop-menu ul li a {
             color: var(--black);
             text-decoration: none;
+            display: inline-block;
             margin-bottom: 20px;
         }
     </style>
@@ -60,18 +60,9 @@
 <body>
     <div class="desktop-menu">
         <ul>
-            <li>
-                <a href="/" class="title">My orders</a>
-            </li>
-
-            <li>
-                <a href="/">My account</a>
-            </li>
-
-            <li>
-                <a href="/">Sign out</a>
-            </li>
-
+            <li><a href="/" class="title">My orders</a></li>
+            <li><a href="/">My account</a></li>
+            <li><a href="/">Sign out</a></li>
         </ul>
     </div>
 </body>

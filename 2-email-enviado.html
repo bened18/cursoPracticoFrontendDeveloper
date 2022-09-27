@@ -21,8 +21,6 @@
         }
         body {
             font-family: 'Quicksand', sans-serif;
-        }
-        body {
             margin: 0;
         }
         .login {
@@ -31,63 +29,71 @@
             display: grid;
             place-items: center;
         }
-        .login__form-container {
+        .form-container {
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
+            justify-items: center;
         }
-        .login__form-container__logo {
+        .logo {
             width: 150px;
-            margin-bottom: 48px;
+            margin-bottom: 50px;
             justify-self: center;
             display: none;
         }
-        .login__form-container__title {
+        .title {
             font-size: var(--lg);
             margin-bottom: 12px;
             text-align: center;
         }
-        .login__form-container__subtitle {
+        .subtitle {
             color: var(--very-light-pink);
             font-size: var(--md);
             font-weight: 300;
             margin-top: 0;
-            margin-bottom: 32px;
-            text-align: center;
+            margin-bottom: 30px;
         }
-        .login__form-container__form {
-            display: flex;
-            flex-direction: column;
-        }
-        .login__form-container__form__label-password {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .login__form-container__form__input-password {
+        .email-image {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
             background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 32px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
         }
-        .login__form-container__form__input-submit {
+        .email-image img {
+            width: 80px;
+        }
+        .resend {
+            font-size: var(--sm);
+        }
+        .resend span {
+            color: var(--very-light-pink);
+        }
+        .resend a {
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
+        .primary-button {
             background-color: var(--hospital-green);
             border-radius: 8px;
             border: none;
+            text-align: center;
             color: var(--white);
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
             font-weight: bold;
-            height: 46px;
+            height: 50px;
+        }
+        .login-button {
             margin-top: 14px;
             margin-bottom: 30px;
         }
-        @media (max-width: 600px) {
-            .login__form-container__logo {
+        @media (max-width: 640px) {
+            .logo {
                 display: block;
             }
         }
@@ -95,21 +101,22 @@
 </head>
 <body>
     <div class="login">
-        <div class="login__form-container">
-            <img src="/Logos/logo_yard_sale.svg" alt="logo" class="login__form-container__logo">
+        <div class="form-container">
+            <img src="/Logos/logo_yard_sale.svg" alt="logo" class="logo">
 
-            <h1 class="login__form-container__title">Create a new password</h1>
-            <p class="login__form-container__subtitle">Enter a new password for your account</p>
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
 
-            <form action="/" class="login__form-container__form">
-                <label for="password" class="login__form-container__form__label-password">Password</label>
-                <input type="password" id="password" placeholder="*********" class="login__form-container__form__input-password">
+            <div class="email-image">
+                <img src="/Icons/email.svg" alt="email">
+            </div>
 
-                <label for="new-password" class="login__form-container__form__label-password">Password</label>
-                <input type="password" id="new-password" placeholder="*********" class="login__form-container__form__input-password">
+            <button class="primary-button login-button">Login</button>
 
-                <input type="submit" value="Confirm" class="login__form-container__form__input-submit">
-            </form>
+            <p class="resend">
+                <span>Didn't receive the email</span>
+                <a href="/">Resend</a>
+            </p>
         </div>
     </div>
 </body>

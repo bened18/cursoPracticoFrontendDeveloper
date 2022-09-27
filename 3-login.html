@@ -21,8 +21,6 @@
         }
         body {
             font-family: 'Quicksand', sans-serif;
-        }
-        body {
             margin: 0;
         }
         .login {
@@ -31,111 +29,103 @@
             display: grid;
             place-items: center;
         }
-        .login__form-container {
+        .form-container {
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
         }
-        .login__form-container__logo {
+        .logo {
             width: 150px;
-            margin-bottom: 48px;
+            margin-bottom: 50px;
             justify-self: center;
             display: none;
         }
-        .login__form-container__form {
+        .form {
             display: flex;
             flex-direction: column;
         }
-        .login__form-container__form__label-email {
+        .form a {
+            color: var(--hospital-green);
+            text-decoration: none;
+            font-size: var(--sm);
+            text-align: center;
+            margin-bottom: 52px;
+        }
+        .label {
             font-size: var(--sm);
             font-weight: bold;
             margin-bottom: 4px;
         }
-        .login__form-container__form__input-email {
+        .input {
             background-color: var(--text-input-field);
             border: none;
             border-radius: 8px;
-            height: 32px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 22px;
-        }
-        .login__form-container__form__label-password {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .login__form-container__form__input-password {
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 32px;
+            height: 30px;
             font-size: var(--md);
             padding: 6px;
             margin-bottom: 12px;
         }
-        .login__form-container__form__button-login {
+        .input-email {
+            margin-bottom: 22px;
+        }
+        .primary-button {
             background-color: var(--hospital-green);
             border-radius: 8px;
             border: none;
+            text-align: center;
             color: var(--white);
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
             font-weight: bold;
-            height: 46px;
-            margin-top: 14px;
-            margin-bottom: 30px;
+            height: 50px;
         }
-        .login__form-container a {
-            color: var(--hospital-green);
-            font-size: var(--sm);
-            text-align: center;
-            text-decoration: none;
-            margin-bottom: 52px;
-        }
-        .login__form-container__button-singup {
+        .secondary-button {
             background-color: var(--white);
             border-radius: 8px;
             border: 1px solid var(--hospital-green);
+            text-align: center;
             color: var(--hospital-green);
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
             font-weight: bold;
-            height: 46px;
+            height: 50px;
         }
-        @media (max-width: 600px) {
-            .login__form-container__logo {
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) {
+            .logo {
                 display: block;
             }
-            .login__form-container__button-singup {
-                width: 300px;
+            .signup-button {
                 position: absolute;
                 bottom: 0;
-                margin-bottom: 24px;
-            }
+                width: 300px;
+                margin-bottom: 16px;
+            }            
         }
     </style>
 </head>
 <body>
     <div class="login">
-        <div class="login__form-container">
-            <img src="/Logos/logo_yard_sale.svg" alt="logo" class="login__form-container__logo">
+        <div class="form-container">
+            <img src="/Logos/logo_yard_sale.svg" alt="logo" class="logo">
 
-            <form action="/" class="login__form-container__form">
-                <label for="email" class="login__form-container__form__label-email">Email address</label>
-                <input type="text" id="email" placeholder="user@example.com" class="login__form-container__form__input-email">
 
-                <label for="password" class="login__form-container__form__label-password">Password</label>
-                <input type="password" id="password" placeholder="*********" class="login__form-container__form__input-password">
+            <form action="/" class="form">
+                <label for="email" class="label">Email address</label>
+                <input type="text" id="email" placeholder="platzi@example.com" class="input input-email">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="input input-password">
 
-                <input type="submit" value="Log In" class="login__form-container__form__button-login">
-
+                <input type="submit" value="Log in" class="primary-button login-button">
                 <a href="/">Forgot my password</a>
             </form>
 
-            <button class="login__form-container__button-singup">Sing up</button>
+            <button class="secondary-button signup-button">Sign up</button>
         </div>
     </div>
 </body>
